@@ -6,8 +6,12 @@
   ],
   "scripts": {
     "clean": "lerna clean --yes",
-    "bootstrap": "npm run clean && lerna bootstrap --use-workspaces",
-    "release": "lerna publish"
+    "bootstrap": "yarn clean && lerna bootstrap --use-workspaces",
+    "release": "lerna publish",
+    "lint": "yarn workspace @flash-components/core eslint src",
+    "prettier": "prettier \"**/**/**/*.+(js|json|jsx|ts|tsx|md|mdx)\"",
+    "format": "yarn prettier --write",
+    "validate": "yarn lint && yarn prettier --list-different"
   },
   "devDependencies": {
     "@emotion/core": "10.0.28",
@@ -24,12 +28,10 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.19.0",
     "eslint-plugin-react-hooks": "3.0.0",
+    "eslint-plugin-prettier": "3.1.2",
     "lerna": "3.20.2",
     "prettier": "2.0.4",
     "react": "16.13.1",
     "react-dom": "16.13.1"
-  },
-  "dependencies": {
-    "eslint-plugin-prettier": "^3.1.2"
   }
 }

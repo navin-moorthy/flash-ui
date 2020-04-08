@@ -24,10 +24,10 @@ the following:
 
 ## Submitting a pull request
 
-Flash Components is a community project, so pull requests are always welcome. But
-before working on a large change, it is best to open an issue first to discuss
-it with the maintainers. If no issue exists addressing the change you would like
-implemented, feel free to create one.
+Flash Components is a community project, so pull requests are always welcome.
+But before working on a large change, it is best to open an issue first to
+discuss it with the maintainers. If no issue exists addressing the change you
+would like implemented, feel free to create one.
 
 If you decide to work on an already opened issue, do check the comments thread
 of that particular issue just incase someone else is already working on a fix.
@@ -110,13 +110,15 @@ TODO
 The Markdown file is the source for the website documentation. So, whatever you
 write there will get reflected on the website.
 
-In this case, the file you need to edit is `packages/flash-components-docs/pages/`, and
-I'm going to add a description about the component.
+In this case, the file you need to edit is
+`packages/flash-components-docs/pages/`, and I'm going to add a description
+about the component.
 
 ## How do I use my local distribution of flash-components in any project?
 
 Sometimes it is good to test your changes in a real world scenario, in order to
-do that you can install your local distribution of Flash Components in any project with
+do that you can install your local distribution of Flash Components in any
+project with
 [lerna link](https://github.com/lerna/lerna/tree/master/commands/link).
 
 First, you have to build your local distribution of Flash Components:
@@ -126,18 +128,18 @@ First, you have to build your local distribution of Flash Components:
 yarn build
 ```
 
-Next, you link your local distribution of Flash Components to any project you want to
-try your changes:
+Next, you link your local distribution of Flash Components to any project you
+want to try your changes:
 
 ```shell
 # From the root folder of any project
 lerna link
 ```
 
-Now, every time you import from `@flash-components/core` in your project, it is going
-to use your local distribution.
+Now, every time you import from `@flash-components/core` in your project, it is
+going to use your local distribution.
 
 ## License
 
-By contributing your code to the flash-components GitHub repository, you agree to
-license your contribution under the MIT license.
+By contributing your code to the flash-components GitHub repository, you agree
+to license your contribution under the MIT license.
