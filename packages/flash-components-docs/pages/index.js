@@ -1,5 +1,7 @@
 import React from "react";
 import Head from "next/head";
+import { Box } from "@flash-components/core";
+console.log("%cBox", "color: #00e600", Box);
 
 const Home = () => (
   <div className="container">
