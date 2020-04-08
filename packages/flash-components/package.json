@@ -8,6 +8,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "dependencies": {
+    "@styled-system/should-forward-prop": "^5.1.5",
+    "styled-system": "^5.1.5"
+  },
   "peerDependencies": {
     "@emotion/core": "10.x",
     "@emotion/styled": "10.x",
