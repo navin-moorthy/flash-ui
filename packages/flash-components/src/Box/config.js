@@ -1,7 +1,8 @@
 import { system, get } from "styled-system";
 
-const isNumber = (n) => typeof n === "number" && !isNaN(n);
-const getWidth = (n, scale) => get(scale, n, !isNumber(n) || n > 1 ? n : n * 100 + "%");
+const isNumber = n => typeof n === "number" && !isNaN(n);
+const getWidth = (n, scale) =>
+  get(scale, n, !isNumber(n) || n > 1 ? n : n * 100 + "%");
 
 export const config = {
   roundedTop: {
@@ -152,7 +153,7 @@ const transformAlias = (prop, propValue) => {
   if (configKeys.includes(prop)) {
     const { properties, property } = config[prop];
     if (properties) {
-      properties.forEach((_cssProp) => (result[_cssProp] = propValue));
+      properties.forEach(_cssProp => (result[_cssProp] = propValue));
     }
     if (property) {
       result[property] = propValue;
@@ -166,7 +167,7 @@ const transformAlias = (prop, propValue) => {
   return result;
 };
 
-export const transformAliasProps = (props) => {
+export const transformAliasProps = props => {
   let result = {};
   for (let prop in props) {
     if (typeof props[prop] === "object" && !Array.isArray(props[prop])) {
