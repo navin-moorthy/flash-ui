@@ -1,0 +1,20 @@
+node_modules/
+lerna-debug.log
+npm-debug.log
+npm-debug.log*
+yarn-error.log
+.next
+*.log
+storybook-static
+yarn.lock
+package-lock.json
+packages/*/node_modules
+packages/*/.env
+packages/*/dist
+packages/*/lib
+packages/*/coverage
+packages/*/.next
+packages/*/.rpt2_cache
+packages/*/.rts2_cache*
+# Local Netlify folder
+.netlify
