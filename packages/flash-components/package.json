@@ -1,0 +1,33 @@
+{
+  "name": "@flash-components/core",
+  "version": "0.0.0",
+  "description": "Responsive and accessible React UI components built with React and Emotion",
+  "main": "dist/index.js",
+  "module": "dist/es/index.js",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@emotion/core": "10.x",
+    "@emotion/styled": "10.x",
+    "emotion-theming": "10.x",
+    "react": ">= 16.8",
+    "react-dom": ">= 16.8"
+  },
+  "author": "Navin Moorthy <navin007.a@gmail.com>",
+  "license": "MIT",
+  "homepage": "",
+  "repository": "https://github.com/navin-moorthy/flash-components",
+  "keywords": [
+    "react",
+    "ui",
+    "design-system",
+    "react-components",
+    "uikit",
+    "accessible",
+    "components",
+    "emotion",
+    "library"
+  ]
+}
