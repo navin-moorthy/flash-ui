@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import { Box } from "@flash-components/core";
-console.log("%cBox", "color: #00e600", Box);
 
 const Home = () => (
   <div className="container">
@@ -14,6 +13,8 @@ const Home = () => (
       <h1 className="title">
         Welcome to <a href="https://nextjs.org">Next.js!</a>
       </h1>
+
+      <Box>Box</Box>
 
       <p className="description">
         Get started by editing <code>pages/index.js</code>
