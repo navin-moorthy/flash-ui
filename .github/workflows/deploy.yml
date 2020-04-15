@@ -20,11 +20,11 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Use Node JS
-      - uses: actions/setup-node@v1
+        uses: actions/setup-node@v1
         with:
           node-version: '10.x'
       
       - name: Bootstrap Project
-      - run: |
+        run: |
           yarn global add lerna now
           yarn boot
