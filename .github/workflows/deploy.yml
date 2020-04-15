@@ -30,9 +30,10 @@ jobs:
           yarn global add lerna now
           yarn boot
 
-      - name: Deploy to NOW
-        run: |
-          - cd packages/flash-components-docs
-          - yarn build
-          - cd out
-          - now --token ${{ secrets.NOW_TOKEN }}
+      - name: Build Docz
+        working-directory: ./packages/flash-components-docs
+        run: yarn build
+        
+      - name: Deploy to Now
+        working-directory: ./packages/flash-components-docs/out
+        run: now --token ${{ secrets.NOW_TOKEN }}
