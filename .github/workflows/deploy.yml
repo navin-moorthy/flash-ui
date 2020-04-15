@@ -26,5 +26,6 @@ jobs:
       
       - name: Bootstrap Project
         run: |
+          sudo rm /usr/local/bin/now
           yarn global add lerna now
           yarn boot
