@@ -14,6 +14,6 @@ script:
 
 deploy:
   provider: script
-  script: now public --token $NOW_TOKEN
+  script: now ./out --token $NOW_TOKEN --confirm
   skip_cleanup: true
   app: Flash Components
