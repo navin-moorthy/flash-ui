@@ -26,8 +26,7 @@ jobs:
       
       - name: Bootstrap Project
         run: |
-          sudo rm /usr/local/bin/now
-          yarn global add lerna now
+          yarn global add lerna
           yarn boot
 
       - name: Build Docz
@@ -36,4 +35,6 @@ jobs:
         
       - name: Deploy to Now
         working-directory: ./packages/flash-components-docs/out
-        run: now --token ${{ secrets.NOW_TOKEN }}
+        run: |
+          yarn global add now@latest
+          now --token ${{ secrets.NOW_TOKEN }}
