@@ -36,5 +36,6 @@ jobs:
       - name: Deploy to Now
         working-directory: ./packages/flash-components-docs/out
         run: |
+          sudo rm /usr/local/bin/now
           yarn global add now@latest
           now --token ${{ secrets.NOW_TOKEN }}
