@@ -29,3 +29,10 @@ jobs:
           sudo rm /usr/local/bin/now
           yarn global add lerna now
           yarn boot
+
+      - name: Deploy to NOW
+        run: |
+          - cd packages/flash-components-docs
+          - yarn build
+          - cd out
+          - now --token ${{ secrets.NOW_TOKEN }}
