@@ -60,7 +60,7 @@ jobs:
         run: yarn bootstrap
 
       - name: Lerna Link
-        run: yarn link
+        run: yarn build && yarn link
 
       - name: Build Docz
         working-directory: ./packages/flash-components-docs
