@@ -36,6 +36,8 @@ jobs:
     runs-on: [ubuntu-latest]
     
     steps:
+      - uses: actions/checkout@v2
+        
       - name: Build Docz
         working-directory: ./packages/flash-components-docs
         run: yarn build
@@ -46,6 +48,8 @@ jobs:
     runs-on: [ubuntu-latest]
     
     steps:
+      - uses: actions/checkout@v2
+        
       - name: Deploy to Now
         working-directory: ./packages/flash-components-docs/out
         env:
