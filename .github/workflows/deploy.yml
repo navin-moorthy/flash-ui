@@ -12,8 +12,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  deploy:
-    name: Deployment
+  boot:
+    name: Bootstrap
     runs-on: [ubuntu-latest]
     
     steps:
@@ -24,18 +24,30 @@ jobs:
         with:
           node-version: '10.x'
       
-      - name: Bootstrap Project
-        run: |
-          yarn global add lerna
-          yarn boot
-
+      - name: Add lerna Global
+        run: yarn global add lerna
+      
+      - name: Clean & Install Deps
+        run: yarn boot
+          
+  build:
+    name: Build
+    needs: boot
+    runs-on: [ubuntu-latest]
+    
+    steps:
       - name: Build Docz
         working-directory: ./packages/flash-components-docs
         run: yarn build
-        
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: [ubuntu-latest]
+    
+    steps:
       - name: Deploy to Now
         working-directory: ./packages/flash-components-docs/out
         env:
           NOW_TOKEN: ${{ secrets.NOW_TOKEN }}
-        run: |
-          now --token ${NOW_TOKEN} --confirm --name flash-components --no-clipboard --prod
+        run: now --token ${NOW_TOKEN} --confirm --name flash-components --no-clipboard --prod
