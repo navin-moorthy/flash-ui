@@ -8,7 +8,7 @@
     "commit": "git-cz",
     "postinstall": "yarn build",
     "clean": "git clean -fdx .",
-    "boot": "yarn clean && yarn bootstrap && lerna link && yarn build",
+    "boot": "yarn bootstrap && lerna link && yarn build",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "docs": "yarn workspace @flash-components/docs dev",
     "build": "yarn workspace @flash-components/core build",
