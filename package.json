@@ -7,7 +7,6 @@
   "scripts": {
     "commit": "git-cz",
     "clean": "git clean -fdx .",
-    "boot": "yarn bootstrap && lerna link && yarn build",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "docs": "yarn workspace @flash-components/docs dev",
     "build": "yarn workspace @flash-components/core build",

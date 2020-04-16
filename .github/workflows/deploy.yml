@@ -44,8 +44,18 @@ jobs:
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install
 
+      - name: Restore lerna
+        id: lerna-cache
+        uses: actions/cache@master
+        with:
+          path: |
+            node_modules
+            */*/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
       - name: Lerna Bootstrap
-        run: yarn boot
+        if: steps.lerna-cache.outputs.cache-hit != 'true'
+        run: yarn bootstrap
 
       - name: Build Docz
         working-directory: ./packages/flash-components-docs
