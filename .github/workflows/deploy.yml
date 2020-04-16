@@ -50,13 +50,6 @@ jobs:
       - name: Lerna Link
         run: yarn build && yarn link
 
-      - name: Cache Next Build
-        uses: actions/cache@v1
-        with:
-          path:
-            ${{ github.workspace }}/packages/flash-components-docs/next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn-lock') }}
-
       - name: Build Docs
         working-directory: ./packages/flash-components-docs
         run: yarn build
