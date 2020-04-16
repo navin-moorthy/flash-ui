@@ -6,7 +6,6 @@
   ],
   "scripts": {
     "commit": "git-cz",
-    "postinstall": "yarn build",
     "clean": "git clean -fdx .",
     "boot": "yarn bootstrap && lerna link && yarn build",
     "bootstrap": "lerna bootstrap --use-workspaces",

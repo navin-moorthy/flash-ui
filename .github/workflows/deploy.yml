@@ -6,33 +6,34 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   deploy:
     name: Deploy
     runs-on: [ubuntu-latest]
-    
+
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Use Node JS
         uses: actions/setup-node@v1
         with:
-          node-version: '10.x'
-      
+          node-version: "10.x"
+
       - name: Bootstrap Project
         run: |
           yarn global add lerna
+          yarn install
           yarn boot
 
       - name: Build Docz
         working-directory: ./packages/flash-components-docs
         run: yarn build
-        
+
       - name: Deploy to Now
         working-directory: ./packages/flash-components-docs/out
         env:
