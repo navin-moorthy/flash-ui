@@ -57,7 +57,7 @@ jobs:
             ${{ github.workspace }}/packages/flash-components-docs/next/cache
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn-lock') }}
 
-      - name: Build Docz
+      - name: Build Docs
         working-directory: ./packages/flash-components-docs
         run: yarn build
 
