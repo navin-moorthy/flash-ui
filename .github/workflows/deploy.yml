@@ -51,14 +51,16 @@ jobs:
           path: |
             node_modules
             */*/node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-lerna-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-lerna-
 
       - name: Lerna Bootstrap
         if: steps.lerna-cache.outputs.cache-hit != 'true'
         run: yarn bootstrap
 
       - name: Lerna Link
-        run: lerna link
+        run: yarn link
 
       - name: Build Docz
         working-directory: ./packages/flash-components-docs
