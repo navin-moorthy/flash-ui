@@ -44,23 +44,18 @@ jobs:
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install
 
-      - name: Restore lerna
-        id: lerna-cache
-        uses: actions/cache@master
-        with:
-          path: |
-            node_modules
-            */*/node_modules
-          key: ${{ runner.os }}-lerna-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-lerna-
-
       - name: Lerna Bootstrap
-        if: steps.lerna-cache.outputs.cache-hit != 'true'
         run: yarn bootstrap
 
       - name: Lerna Link
         run: yarn build && yarn link
+
+      - name: Cache Next Build
+        uses: actions/cache@v1
+        with:
+          path:
+            ${{ github.workspace }}/packages/flash-components-docs/next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn-lock') }}
 
       - name: Build Docz
         working-directory: ./packages/flash-components-docs
