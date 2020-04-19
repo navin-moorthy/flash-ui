@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Heading } from "@chakra-ui/core";
 import { ComponentLink, stringToUrl } from "./NavLink";
 
-const components = ["Box", "PseudoBox"];
+const components = ["Box", "PseudoBox", "Flex", "Stack", "Text", "Heading"];
 
 const NavGroupHeading = props => (
   <Heading
