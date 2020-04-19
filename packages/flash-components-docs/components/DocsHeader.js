@@ -1,11 +1,6 @@
 /** @jsx jsx */
-import {
-  Box,
-  Flex,
-  IconButton,
-  useColorMode,
-  PseudoBox,
-} from "@chakra-ui/core";
+import { Flex, IconButton, useColorMode } from "@chakra-ui/core";
+import { Box, PseudoBox } from "@flash-components/core";
 import { jsx } from "@emotion/core";
 import { DiGithubBadge } from "react-icons/di";
 import Logo from "./Logo";

@@ -17,6 +17,7 @@ module.exports = withMDX({
     return {
       "/": { page: "/" },
       "/box": { page: "/box" },
+      "/pseudobox": { page: "/pseudobox" },
     };
   },
 });

@@ -1,14 +1,13 @@
 /** @jsx jsx */
 import {
-  Box,
   Callout,
   Code,
   Heading,
   Kbd,
-  PseudoBox,
   Text,
   useColorMode,
 } from "@chakra-ui/core";
+import { Box, PseudoBox } from "@flash-components/core";
 import { jsx } from "@emotion/core";
 import NextLink from "next/link";
 import { forwardRef } from "react";
