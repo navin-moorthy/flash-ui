@@ -3,16 +3,20 @@ import { Box, Heading } from "@chakra-ui/core";
 import { ComponentLink, stringToUrl } from "./NavLink";
 
 const components = [
+  "Accordion",
+  "Alert",
   "Box",
-  "PseudoBox",
-  "Flex",
-  "Stack",
-  "Text",
-  "Heading",
-  "Grid",
   "Button",
+  "CloseButton",
+  "Collapse",
+  "Flex",
+  "Grid",
+  "Heading",
   "Icon",
+  "PseudoBox",
+  "Stack",
   "Spinner",
+  "Text",
 ];
 
 const NavGroupHeading = props => (

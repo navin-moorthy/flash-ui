@@ -9,3 +9,8 @@ export { default as Icon } from "./Icon";
 export { default as VisuallyHidden } from "./VisuallyHidden";
 export { default as Spinner } from "./Spinner";
 export { default as Button } from "./Button";
+export { default as ButtonGroup } from "./ButtonGroup";
+export * from "./Accordion";
+export { default as Collapse } from "./Collapse";
+export * from "./Alert";
+export { default as CloseButton } from "./CloseButton";

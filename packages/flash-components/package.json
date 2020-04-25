@@ -21,6 +21,7 @@
   "dependencies": {
     "@styled-system/should-forward-prop": "^5.1.5",
     "colors": "^1.4.0",
+    "react-animate-height": "^2.0.21",
     "styled-system": "^5.1.5",
     "use-dark-mode": "^2.3.1"
   },
