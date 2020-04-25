@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import darkTheme from "prism-react-renderer/themes/nightOwl";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import { mdx } from "@mdx-js/react";
-import * as ReactIcons from "react-icons/md";
 import * as Chakra from "@chakra-ui/core";
+import * as Formik from "formik";
+import * as ReactIcons from "react-icons/md";
+import FocusLock from "react-focus-lock";
+import Lorem from "react-lorem-component";
+import ChakraPortal from "./Portal";
 import * as Flash from "@flash-components/core";
 
-const { Button, useClipboard } = Chakra;
-const { Box } = Flash;
+const { Box, Button, useClipboard } = Chakra;
 
 export const liveEditorStyle = {
   fontSize: 14,
@@ -118,9 +121,13 @@ const CodeBlock = ({
     transformCode: code => "/** @jsx mdx */" + code,
     scope: {
       ...Flash,
+      ...Formik,
       ...ReactIcons,
       mdx,
       StarIcon,
+      FocusLock,
+      ChakraPortal,
+      Lorem,
     },
     noInline: isManual,
     ...props,

@@ -49,7 +49,6 @@ const CloseButton = ({
   const activeColor = { light: "blackAlpha.200", dark: "whiteAlpha.200" };
 
   const buttonSize = sizes[size] && sizes[size]["button"];
-  console.log("%cbuttonSize", "color: #f2ceb6", buttonSize);
   const iconSize = sizes[size] && sizes[size]["icon"];
 
   return (

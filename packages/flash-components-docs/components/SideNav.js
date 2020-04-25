@@ -13,6 +13,7 @@ const components = [
   "Grid",
   "Heading",
   "Icon",
+  "Modal",
   "PseudoBox",
   "Stack",
   "Spinner",

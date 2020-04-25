@@ -20,8 +20,12 @@
   },
   "dependencies": {
     "@styled-system/should-forward-prop": "^5.1.5",
+    "aria-hidden": "^1.1.1",
+    "body-scroll-lock": "^3.0.1",
     "colors": "^1.4.0",
+    "exenv": "^1.2.2",
     "react-animate-height": "^2.0.21",
+    "react-focus-lock": "^2.3.1",
     "styled-system": "^5.1.5",
     "use-dark-mode": "^2.3.1"
   },

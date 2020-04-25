@@ -13,4 +13,6 @@ export { default as ButtonGroup } from "./ButtonGroup";
 export * from "./Accordion";
 export { default as Collapse } from "./Collapse";
 export * from "./Alert";
+export * from "./Modal";
 export { default as CloseButton } from "./CloseButton";
+export { default as useDisclosure } from "./useDisclosure";
