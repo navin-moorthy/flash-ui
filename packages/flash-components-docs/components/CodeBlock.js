@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import darkTheme from "prism-react-renderer/themes/nightOwl";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import { mdx } from "@mdx-js/react";
+import * as ReactIcons from "react-icons/md";
 import * as Chakra from "@chakra-ui/core";
 import * as Flash from "@flash-components/core";
 
@@ -117,6 +118,7 @@ const CodeBlock = ({
     transformCode: code => "/** @jsx mdx */" + code,
     scope: {
       ...Flash,
+      ...ReactIcons,
       mdx,
       StarIcon,
     },

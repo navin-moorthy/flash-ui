@@ -4,3 +4,8 @@ export { default as Flex } from "./Flex";
 export { default as Stack } from "./Stack";
 export { default as Text } from "./Text";
 export { default as Heading } from "./Heading";
+export { default as Grid } from "./Grid";
+export { default as Icon } from "./Icon";
+export { default as VisuallyHidden } from "./VisuallyHidden";
+export { default as Spinner } from "./Spinner";
+export { default as Button } from "./Button";
