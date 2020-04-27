@@ -25,3 +25,4 @@ export { default as RadioGroup } from "./RadioGroup";
 export { default as RadioButtonGroup } from "./RadioButtonGroup";
 export { default as Checkbox } from "./Checkbox";
 export { default as CheckboxGroup } from "./CheckboxGroup";
+export { default as Input } from "./Input";
