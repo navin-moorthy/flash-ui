@@ -5,6 +5,10 @@ import { ComponentLink, stringToUrl } from "./NavLink";
 const components = [
   "Accordion",
   "Alert",
+  "AlertDialog",
+  "AspectRatioBox",
+  "Avatar",
+  "Badge",
   "Box",
   "Button",
   "Checkbox",
@@ -16,6 +20,7 @@ const components = [
   "Grid",
   "Heading",
   "Icon",
+  "Image",
   "Input",
   "Modal",
   "PseudoBox",
