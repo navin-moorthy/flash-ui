@@ -38,5 +38,3 @@ jobs:
 
       - run: yarn build
         name: Build all packages
-      # - run: yarn test
-      #   name: Run all tests
