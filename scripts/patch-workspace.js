@@ -25,74 +25,75 @@ async function setupJestConfig(options) {
 
   const content = `module.exports = ${JSON.stringify(jestConfig)}`
   const formatted = prettier.format(content, { semi: false, parser: "babel" })
+  console.log("%c formatted", "color: #cc0088", formatted)
 
   fs.writeFileSync(path, formatted)
 }
 
-function updateEntryPoints(options) {
-  const entryPoints = {
-    main: "dist/cjs",
-    module: "dist/esm",
-    types: "dist/types",
-  }
+// function updateEntryPoints(options) {
+//   const entryPoints = {
+//     main: "dist/cjs",
+//     module: "dist/esm",
+//     types: "dist/types",
+//   }
 
-  editPackageJson(options.dir, entryPoints)
-}
+//   editPackageJson(options.dir, entryPoints)
+// }
 
-function updateScripts(options) {
-  const scripts = {
-    prebuild: "rimraf dist",
-    start: "nodemon --exec yarn build --watch src",
-    "build:esm":
-      "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
-    "build:cjs":
-      "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
-    "build:types":
-      "tsc --emitDeclarationOnly --declaration --declarationMap --declarationDir dist/types",
-    build: "concurrently yarn:build:*",
-    test: "jest --env=jsdom --passWithNoTests",
-    "test:cov": "yarn test --coverage",
-    "lint:src": "eslint src --ext .ts,.tsx --config ../../.eslintrc",
-    "lint:types": "tsc --noEmit",
-    lint: "concurrently yarn:lint:*",
-  }
+// function updateScripts(options) {
+//   const scripts = {
+//     prebuild: "rimraf dist",
+//     start: "nodemon --exec yarn build --watch src",
+//     "build:esm":
+//       "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
+//     "build:cjs":
+//       "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
+//     "build:types":
+//       "tsc --emitDeclarationOnly --declaration --declarationMap --declarationDir dist/types",
+//     build: "concurrently yarn:build:*",
+//     test: "jest --env=jsdom --passWithNoTests",
+//     "test:cov": "yarn test --coverage",
+//     "lint:src": "eslint src --ext .ts,.tsx --config ../../.eslintrc",
+//     "lint:types": "tsc --noEmit",
+//     lint: "concurrently yarn:lint:*",
+//   }
 
-  editPackageJson(options.dir, scripts, `scripts`)
-}
+//   editPackageJson(options.dir, scripts, `scripts`)
+// }
 
-function updateDevDependies(options) {
-  const pkgJson = getPackageJson(options.dir)
-  const devDeps = pkgJson.get("devDependencies")
+// function updateDevDependies(options) {
+//   const pkgJson = getPackageJson(options.dir)
+//   const devDeps = pkgJson.get("devDependencies")
 
-  if (!!devDeps) {
-    console.log(devDeps)
-  } else {
-    // bail-out
-    return
-  }
+//   if (!!devDeps) {
+//     console.log(devDeps)
+//   } else {
+//     // bail-out
+//     return
+//   }
 
-  deletePackageJson(options.dir, "devDependencies")
-}
+//   deletePackageJson(options.dir, "devDependencies")
+// }
 
-function updateTSConfig(options) {
-  const tsConfigPath = fs.resolve(options.dir, "tsconfig.json")
-  const tsConfig = editJson(tsConfigPath)
-  tsConfig.set("extends", "../../tsconfig.json")
-  tsConfig.save()
-}
+// function updateTSConfig(options) {
+//   const tsConfigPath = fs.resolve(options.dir, "tsconfig.json")
+//   const tsConfig = editJson(tsConfigPath)
+//   tsConfig.set("extends", "../../tsconfig.json")
+//   tsConfig.save()
+// }
 
-function bootstrap(options) {
-  shell.exec("yarn bootstrap")
-  const commands = ["lint", "build", "test"]
-  commands.forEach((script) => {
-    shell.exec(`${options.cmd} ${script}`)
-  })
-}
+// function bootstrap(options) {
+//   shell.exec("yarn bootstrap")
+//   const commands = ["lint", "build", "test"]
+//   commands.forEach((script) => {
+//     shell.exec(`${options.cmd} ${script}`)
+//   })
+// }
 
-function deleteNodeModule(options) {
-  const path = fs.resolve(options.dir, "node_modules")
-  shell.rm("-rf", path)
-}
+// function deleteNodeModule(options) {
+//   const path = fs.resolve(options.dir, "node_modules")
+//   shell.rm("-rf", path)
+// }
 
 async function builder(options) {
   const tasks = [
@@ -100,30 +101,30 @@ async function builder(options) {
       title: "Setup jest config",
       task: () => setupJestConfig(options),
     },
-    {
-      title: "Update entry points in package.json",
-      task: () => updateEntryPoints(options),
-    },
-    {
-      title: "Update scripts in package.json",
-      task: () => updateScripts(options),
-    },
-    {
-      title: "Update devDependencies in package.json",
-      task: async () => await updateDevDependies(options),
-    },
-    {
-      title: "update ts config",
-      task: () => updateTSConfig(options),
-    },
-    {
-      title: "bootstrap and run commands",
-      task: () => bootstrap(options),
-    },
-    {
-      title: "delete node_modules",
-      task: () => deleteNodeModule(options),
-    },
+    // {
+    //   title: "Update entry points in package.json",
+    //   task: () => updateEntryPoints(options),
+    // },
+    // {
+    //   title: "Update scripts in package.json",
+    //   task: () => updateScripts(options),
+    // },
+    // {
+    //   title: "Update devDependencies in package.json",
+    //   task: async () => await updateDevDependies(options),
+    // },
+    // {
+    //   title: "update ts config",
+    //   task: () => updateTSConfig(options),
+    // },
+    // {
+    //   title: "bootstrap and run commands",
+    //   task: () => bootstrap(options),
+    // },
+    // {
+    //   title: "delete node_modules",
+    //   task: () => deleteNodeModule(options),
+    // },
   ]
 
   for (const item of tasks) {
