@@ -8,4 +8,4 @@ export default {
   // decorators: [(story: Function) => <Container mt={4}>{story()}</Container>],
 }
 
-export const Basic = () => <div>TEST</div>
+export const CSSReset = () => <div>CSSReset</div>

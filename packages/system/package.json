@@ -1,5 +1,5 @@
 {
-  "name": "name",
+  "name": "@flash-ui/system",
   "version": "1.0.0-next.2",
   "description": "description",
   "keywords": [
@@ -43,11 +43,7 @@
     "lint:src": "eslint src --ext .ts,.tsx --config ../../.eslintrc",
     "lint:types": "tsc --noEmit"
   },
-  "dependencies": {
-    "@flash-ui/utils": "1.0.0-next.2",
-    "@flash-ui/hooks": "1.0.0-next.2",
-    "@flash-ui/system": "1.0.0-next.2"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "16.x"
   }

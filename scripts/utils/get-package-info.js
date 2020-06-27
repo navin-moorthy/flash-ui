@@ -11,5 +11,8 @@ export default function getPackageInfo(pkg) {
   // prepare the directory path to run
   const dir = `packages/${pkg}`
 
-  return { dir, cmd }
+  // name of the package
+  const name = `@flash-ui/${pkg}`
+
+  return { dir, cmd, name }
 }
