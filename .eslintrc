@@ -7,7 +7,6 @@
   },
   "plugins": ["@typescript-eslint", "react-hooks", "jsx-a11y", "prettier"],
   "extends": [
-    "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",

@@ -39,6 +39,7 @@ storybook-static
 
 # library folder
 .lib
+dist
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
