@@ -1,4 +1,5 @@
 <p align="center">
+
   <a href="" rel="noopener">
  <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
 </p>
@@ -11,6 +12,12 @@
 [![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 </div>
 
@@ -38,7 +45,10 @@ Write about 1-2 paragraphs describing the purpose of your project.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your
+local machine for development and testing purposes. See
+[deployment](#deployment) for notes on how to deploy the project on a live
+system.
 
 ### Prerequisites
 
@@ -50,7 +60,8 @@ Give examples
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
+A step by step series of examples that tell you how to get a development env
+running.
 
 Say what the step will be
 
@@ -64,7 +75,8 @@ And repeat
 until finished
 ```
 
-End with an example of getting some data out of the system or using it for a little demo.
+End with an example of getting some data out of the system or using it for a
+little demo.
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
@@ -105,7 +117,9 @@ Add additional notes about how to deploy this on a live system.
 
 - [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+See also the list of
+[contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors)
+who participated in this project.
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
@@ -113,6 +127,25 @@ See also the list of [contributors](https://github.com/kylelobo/The-Documentatio
 - Inspiration
 - References
 
-Generated using VSCode Extension - [README pattern](https://marketplace.visualstudio.com/items?itemName=thomascsd.vscode-readme-pattern)
+Generated using VSCode Extension -
+[README pattern](https://marketplace.visualstudio.com/items?itemName=thomascsd.vscode-readme-pattern)
 
-Alternative to use - [README md Generator](https://github.com/kefranabg/readme-md-generator)
+Alternative to use -
+[README md Generator](https://github.com/kefranabg/readme-md-generator)
+
+## Contributors ✨
+
+Thanks goes to these wonderful people
+([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the
+[all-contributors](https://github.com/all-contributors/all-contributors)
+specification. Contributions of any kind welcome!
