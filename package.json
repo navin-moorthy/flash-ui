@@ -9,7 +9,20 @@
   "author": "Author",
   "license": "MIT",
   "scripts": {
-    "commit": "git-cz"
+    "prestart": "yarn && yarn bootstrap",
+    "boot": "yarn prestart && yarn build",
+    "start": "yarn build",
+    "commit": "git-cz",
+    "bootstrap": "lerna bootstrap --use-workspaces",
+    "build": "lerna run build  --no-private --stream",
+    "clean": "lerna clean --yes && rm -rf node_modules",
+    "test": "lerna run test --no-private --stream",
+    "lint": "lerna run lint --no-private --stream",
+    "version": "lerna version --no-push",
+    "release": "lerna publish",
+    "release:ci": "lerna publish -y --loglevel verbose",
+    "release:next": "lerna publish --force-publish=* --no-private --preid next --dist-tag next",
+    "css-reset": "yarn workspace @flash-ui/css-reset"
   },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
@@ -33,10 +46,12 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react-hooks": "^4.0.4",
     "husky": "^4.2.5",
+    "lerna": "^3.22.1",
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "typescript": "^3.9.5"
-  }
+  },
+  "version": "1.0.0-next.3"
 }
