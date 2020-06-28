@@ -31,6 +31,7 @@
     "release:ci": "lerna publish -y --loglevel verbose",
     "release:next": "lerna publish --force-publish=* --no-private --preid next --dist-tag next",
     "css-reset": "yarn workspace @flash-ui/css-reset",
+    "utils": "yarn workspace @flash-ui/utils",
     "system": "yarn workspace @flash-ui/system"
   },
   "czConfig": {
