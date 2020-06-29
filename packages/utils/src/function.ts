@@ -15,7 +15,7 @@ export function callAllHandlers<T extends (event: any) => void>(
   return function (event: FunctionArguments<T>[0]) {
     fns.some((fn) => {
       fn && fn(event)
-      return event && event.defaultPrevented
+      return event?.defaultPrevented
     })
   }
 }
@@ -34,5 +34,3 @@ export function once(fn?: Function | null) {
     return result
   }
 }
-
-export const noop = () => {}
