@@ -28,6 +28,8 @@ export function mapResponsive(prop: any, mapper: (val: any) => any) {
 }
 
 export function objectToArrayNotation(obj: Dict) {
+  if (!isObject(obj)) return []
+
   const base = [
     ["base", null],
     ["sm", null],
