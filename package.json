@@ -26,7 +26,6 @@
     "playground": "node -r esm scripts/playground.js",
     "patch": "node -r esm scripts/patch-workspace.js",
     "create-pkg": "node scripts/create-package.js",
-    "version": "lerna version --no-push",
     "release": "lerna publish",
     "release:ci": "lerna publish -y --loglevel verbose",
     "release:next": "lerna publish --force-publish=* --no-private --preid next --dist-tag next",
